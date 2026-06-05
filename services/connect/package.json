@@ -1,0 +1,39 @@
+{
+  "name": "@xiaoshop/connect",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.1",
+  "author": "Allen Luo <luoyi@mouji.net>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaoshop/xiaoshop",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoshop/xiaoshop.git",
+    "directory": "services/connect"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaoshop/xiaoshop/issues"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=11.5.1"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsgo --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "@xiaoshop/contracts": "workspace:*",
+    "zod": "catalog:dev"
+  },
+  "devDependencies": {
+    "@typescript/native-preview": "catalog:build",
+    "eslint": "catalog:build",
+    "eslint-plugin-format": "catalog:build",
+    "typescript": "catalog:build",
+    "vitest": "catalog:testing"
+  }
+}

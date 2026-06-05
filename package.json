@@ -1,0 +1,46 @@
+{
+  "name": "@xiaoshop/xiaoshop",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.5.1",
+  "author": "Allen Luo <luoyi@mouji.net>",
+  "license": "MIT",
+  "homepage": "https://github.com/xiaoshop/xiaoshop",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoshop/xiaoshop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaoshop/xiaoshop/issues"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=11.5.1"
+  },
+  "scripts": {
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:build",
+    "@antfu/ni": "catalog:build",
+    "@types/node": "catalog:types",
+    "@typescript/native-preview": "catalog:build",
+    "eslint": "catalog:build",
+    "eslint-plugin-format": "catalog:build",
+    "lint-staged": "catalog:build",
+    "premove": "catalog:build",
+    "simple-git-hooks": "catalog:build",
+    "turbo": "catalog:build",
+    "typescript": "catalog:build"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
