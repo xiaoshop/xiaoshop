@@ -27,6 +27,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "catalog:build",
     "@antfu/ni": "catalog:build",
+    "@commitlint/cli": "catalog:build",
+    "@commitlint/config-conventional": "catalog:build",
     "@types/node": "catalog:types",
     "@typescript/native-preview": "catalog:build",
     "eslint": "catalog:build",
@@ -34,11 +36,18 @@
     "lint-staged": "catalog:build",
     "premove": "catalog:build",
     "simple-git-hooks": "catalog:build",
+    "taze": "catalog:build",
     "turbo": "catalog:build",
     "typescript": "catalog:build"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit ${1}"
   },
   "lint-staged": {
     "*": "eslint --fix"
