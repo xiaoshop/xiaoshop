@@ -4,7 +4,4 @@ export default antfu({
   vue: true,
   typescript: true,
   formatters: true,
-  pnpm: {
-    catalogs: true,
-  },
 })

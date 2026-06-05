@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.0",
   "private": true,
-  "packageManager": "pnpm@11.5.1",
+  "packageManager": "bun@1.3.12",
   "author": "Allen Luo <luoyi@mouji.net>",
   "license": "MIT",
   "homepage": "https://github.com/xiaoshop/xiaoshop",
@@ -17,23 +17,35 @@
   },
   "engines": {
     "node": ">=22.14.0",
-    "pnpm": ">=11.5.1"
+    "bun": ">=1.3.12"
   },
   "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "typecheck": "tsgo --noEmit",
+    "typecheck": "vue-tsc --noEmit",
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
     "@xiaoshop/contracts": "workspace:*",
+    "vue": "catalog:frontend",
+    "vue-router": "catalog:frontend",
     "zod": "catalog:dev"
   },
   "devDependencies": {
     "@typescript/native-preview": "catalog:build",
+    "@vitejs/plugin-vue": "catalog:dev",
+    "@vue/tsconfig": "catalog:dev",
     "eslint": "catalog:build",
     "eslint-plugin-format": "catalog:build",
     "typescript": "catalog:build",
-    "vitest": "catalog:testing"
+    "unplugin-auto-import": "catalog:dev",
+    "unplugin-vue-components": "catalog:dev",
+    "vite": "catalog:dev",
+    "vite-plugin-vue-devtools": "catalog:dev",
+    "vitest": "catalog:testing",
+    "vue-tsc": "catalog:dev"
   }
 }
