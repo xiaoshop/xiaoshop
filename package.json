@@ -22,7 +22,9 @@
     "lint": "turbo run lint",
     "lint:fix": "turbo run lint:fix",
     "typecheck": "turbo run typecheck",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "clean:dist": "premove apps/*/dist packages/*/dist extensions/*/dist services/*/dist docs/dist",
+    "taze": "taze major -frI"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:build",
