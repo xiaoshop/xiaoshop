@@ -1,0 +1,8 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="48" height="48" rx="6"/>
+<path d="M15.6 32.4H32.4V26.8H38V38H10V26.8H15.6V32.4Z"/>
+<path d="M21.2 26.8H15.6V21.2H21.2V26.8Z"/>
+<path d="M32.4 26.8H26.8V21.2H32.4V26.8Z"/>
+<path d="M38 21.2H32.4V15.6H15.6V21.2H10V10H38V21.2Z"/>
+<style>rect{fill:#000}path{fill:#fff}@media (prefers-color-scheme:dark){rect{fill:#fff}path{fill:#000}}</style>
+</svg>

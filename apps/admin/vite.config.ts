@@ -1,24 +1,28 @@
-import path from 'node:path'
-import { DevTools } from '@vitejs/devtools'
+import Tailwindcss from '@tailwindcss/vite'
 import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+import VueDevTools from 'vite-plugin-vue-devtools'
+import Layouts from 'vite-plugin-vue-layouts'
 import VueRouter from 'vue-router/vite'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   resolve: {
-    alias: {
-      '~/': `${path.resolve(__dirname, 'src')}/`,
-    },
+    tsconfigPaths: true,
   },
 
   plugins: [
     // https://github.com/vuejs/router
-    VueRouter(),
+    VueRouter({
+      dts: 'src/typed-router.d.ts',
+    }),
 
     // https://github.com/vuejs/core
     Vue(),
+
+    // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
+    Layouts(),
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
@@ -43,7 +47,12 @@ export default defineConfig({
       dts: 'src/components.d.ts',
     }),
 
-    // https://github.com/vitejs/devtools
-    DevTools(),
+    // https://github.com/tailwindlabs/tailwindcss/tree/main/packages/@tailwindcss-vite
+    Tailwindcss({
+      optimize: { minify: false },
+    }),
+
+    // https://github.com/vuejs/devtools
+    mode === 'development' ? VueDevTools() : undefined,
   ],
-})
+}))
