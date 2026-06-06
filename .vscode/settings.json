@@ -50,6 +50,23 @@
     "postcss"
   ],
 
+  // For vue-router generated files
+  "files.readonlyInclude": {
+    "**/auto-imports.d.ts": true,
+    "**/components.d.ts": true,
+    "**/typed-router.d.ts": true
+  },
+  "files.watcherExclude": {
+    "**/auto-imports.d.ts": true,
+    "**/components.d.ts": true,
+    "**/typed-router.d.ts": true
+  },
+  "search.exclude": {
+    "**/auto-imports.d.ts": true,
+    "**/components.d.ts": true,
+    "**/typed-router.d.ts": true
+  },
+
   // For Tailwind CSS, we can ignore unknown at-rules like @tailwind and @apply.
   "css.lint.unknownAtRules": "ignore"
 }
