@@ -1,11 +1,10 @@
 {
   "$schema": "https://shadcn-vue.com/schema.json",
-  "style": "reka-sera",
-  "font": "dm-sans",
+  "style": "reka-lyra",
   "typescript": true,
   "tailwind": {
     "config": "",
-    "css": "src/style.css",
+    "css": "src/styles/style.css",
     "baseColor": "zinc",
     "cssVariables": true,
     "prefix": ""
@@ -15,12 +14,12 @@
   "pointer": false,
   "aliases": {
     "components": "~/components",
-    "utils": "~/lib/utils",
+    "utils": "~/utils/style",
     "ui": "~/components/ui",
-    "lib": "~/lib",
+    "lib": "~/utils",
     "composables": "~/composables"
   },
-  "menuColor": "default-translucent",
+  "menuColor": "default",
   "menuAccent": "subtle",
   "registries": {}
 }
