@@ -9,4 +9,8 @@ export default antfu({
   settings: {
     'import/core-modules': ['vue-router/auto-routes'],
   },
+}, {
+  rules: {
+    'ts/no-redeclare': 'off',
+  },
 })
