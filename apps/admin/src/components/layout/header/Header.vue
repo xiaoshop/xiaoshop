@@ -9,6 +9,7 @@ defineProps<{
 <template>
   <header class="bg-card border-b">
     <div class="flex-y-center h-(--layout-header-height)">
+      <LayoutNavigation />
       <h1 class="flex-center size-(--layout-header-height)">
         <Logo />
       </h1>
@@ -29,12 +30,8 @@ defineProps<{
       </LayoutHeaderNav>
       <LayoutHeaderNav>
         <slot name="links" />
-        <LayoutHeaderLink to="/">
-          <IconRiWifiOffLine class="size-4" />
-        </LayoutHeaderLink>
-        <LayoutHeaderLink to="/">
-          <IconRiNotificationLine class="size-4" />
-        </LayoutHeaderLink>
+        <LayoutConnection />
+        <LayoutNotification />
       </LayoutHeaderNav>
     </div>
   </header>
