@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn-vue/tailwind.css';
+@import 'utils.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -43,10 +43,13 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Layout */
+  --layout-header-height: 50px;
 }
 
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(0.965 0.007 277.163);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
@@ -120,6 +123,8 @@
   }
   body {
     @apply bg-background text-foreground;
+    @apply font-sans antialiased;
+    @apply overflow-y-hidden;
     @apply font-sans;
   }
 }

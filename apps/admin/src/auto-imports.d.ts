@@ -12,12 +12,14 @@ declare global {
   const customRef: typeof import('vue').customRef
   const defineAsyncComponent: typeof import('vue').defineAsyncComponent
   const defineComponent: typeof import('vue').defineComponent
+  const definePage: typeof import('vue-router/experimental').definePage
   const effectScope: typeof import('vue').effectScope
   const getCurrentInstance: typeof import('vue').getCurrentInstance
   const getCurrentScope: typeof import('vue').getCurrentScope
   const getCurrentWatcher: typeof import('vue').getCurrentWatcher
   const h: typeof import('vue').h
   const inject: typeof import('vue').inject
+  const injectHead: typeof import('@unhead/vue').injectHead
   const isProxy: typeof import('vue').isProxy
   const isReactive: typeof import('vue').isReactive
   const isReadonly: typeof import('vue').isReadonly
@@ -27,6 +29,8 @@ declare global {
   const nextTick: typeof import('vue').nextTick
   const onActivated: typeof import('vue').onActivated
   const onBeforeMount: typeof import('vue').onBeforeMount
+  const onBeforeRouteLeave: typeof import('vue-router').onBeforeRouteLeave
+  const onBeforeRouteUpdate: typeof import('vue-router').onBeforeRouteUpdate
   const onBeforeUnmount: typeof import('vue').onBeforeUnmount
   const onBeforeUpdate: typeof import('vue').onBeforeUpdate
   const onDeactivated: typeof import('vue').onDeactivated
@@ -56,9 +60,14 @@ declare global {
   const useAttrs: typeof import('vue').useAttrs
   const useCssModule: typeof import('vue').useCssModule
   const useCssVars: typeof import('vue').useCssVars
+  const useHead: typeof import('@unhead/vue').useHead
+  const useHeadSafe: typeof import('@unhead/vue').useHeadSafe
   const useId: typeof import('vue').useId
   const useLink: typeof import('vue-router/auto').useLink
   const useModel: typeof import('vue').useModel
+  const useRoute: typeof import('vue-router').useRoute
+  const useRouter: typeof import('vue-router').useRouter
+  const useSeoMeta: typeof import('@unhead/vue').useSeoMeta
   const useSlots: typeof import('vue').useSlots
   const useTemplateRef: typeof import('vue').useTemplateRef
   const watch: typeof import('vue').watch
@@ -84,12 +93,14 @@ declare module 'vue' {
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
+    readonly definePage: UnwrapRef<typeof import('vue-router/experimental')['definePage']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly getCurrentWatcher: UnwrapRef<typeof import('vue')['getCurrentWatcher']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
+    readonly injectHead: UnwrapRef<typeof import('@unhead/vue')['injectHead']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
     readonly isReactive: UnwrapRef<typeof import('vue')['isReactive']>
     readonly isReadonly: UnwrapRef<typeof import('vue')['isReadonly']>
@@ -99,6 +110,8 @@ declare module 'vue' {
     readonly nextTick: UnwrapRef<typeof import('vue')['nextTick']>
     readonly onActivated: UnwrapRef<typeof import('vue')['onActivated']>
     readonly onBeforeMount: UnwrapRef<typeof import('vue')['onBeforeMount']>
+    readonly onBeforeRouteLeave: UnwrapRef<typeof import('vue-router')['onBeforeRouteLeave']>
+    readonly onBeforeRouteUpdate: UnwrapRef<typeof import('vue-router')['onBeforeRouteUpdate']>
     readonly onBeforeUnmount: UnwrapRef<typeof import('vue')['onBeforeUnmount']>
     readonly onBeforeUpdate: UnwrapRef<typeof import('vue')['onBeforeUpdate']>
     readonly onDeactivated: UnwrapRef<typeof import('vue')['onDeactivated']>
@@ -128,9 +141,14 @@ declare module 'vue' {
     readonly useAttrs: UnwrapRef<typeof import('vue')['useAttrs']>
     readonly useCssModule: UnwrapRef<typeof import('vue')['useCssModule']>
     readonly useCssVars: UnwrapRef<typeof import('vue')['useCssVars']>
+    readonly useHead: UnwrapRef<typeof import('@unhead/vue')['useHead']>
+    readonly useHeadSafe: UnwrapRef<typeof import('@unhead/vue')['useHeadSafe']>
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useLink: UnwrapRef<typeof import('vue-router/auto')['useLink']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
+    readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
+    readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
+    readonly useSeoMeta: UnwrapRef<typeof import('@unhead/vue')['useSeoMeta']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>
