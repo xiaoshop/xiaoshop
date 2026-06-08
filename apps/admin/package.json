@@ -29,15 +29,15 @@
     "test": "vitest run --passWithNoTests"
   },
   "dependencies": {
-    "@remixicon/vue": "^4.9.0",
+    "@iconify/vue": "catalog:frontend",
     "@unhead/vue": "catalog:frontend",
-    "@vueuse/core": "^14.3.0",
+    "@vueuse/core": "catalog:frontend",
     "@xiaoshop/contracts": "workspace:*",
     "class-variance-authority": "catalog:frontend",
     "clsx": "catalog:frontend",
     "nprogress": "catalog:frontend",
     "pinia": "catalog:frontend",
-    "reka-ui": "^2.9.9",
+    "reka-ui": "catalog:frontend",
     "shadcn-vue": "catalog:frontend",
     "tailwind-merge": "catalog:frontend",
     "vue": "catalog:frontend",
